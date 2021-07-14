@@ -15,7 +15,7 @@ contract TokenRecover is Ownable {
    * @param tokenAddress The token contract address
    * @param tokenAmount Number of tokens to be sent
    */
-  function recoverERC20(
+  function recoverBEP20(
     address tokenAddress,
     uint256 tokenAmount
   )

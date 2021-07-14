@@ -22,7 +22,7 @@ contract POP is Ownable, BEP20("POP Network Token", "POP"), TokenRecover {
         emit SetMinter(_minter);
     }
 
-    function mint(address _to, uint256 _amount) public onlyOwner {
+    function mint(address _to, uint256 _amount) public {
         require(minter == msg.sender, "POP: caller is not a minter");
         require(_amount.add(totalSupply()) <= MAX_SUPPLY, "POP: maxcap reached");
         _mint(_to, _amount);
